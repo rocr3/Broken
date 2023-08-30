@@ -228,24 +228,14 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 
 <b> Size ⚙️: {file_size}</b>""" 
 
-    IMDB_TEMPLATE_TXT = """
-<b>Query: {qurey}
+    IMDB_TEMPLATE_TXT = """<i><b>📹</i></b> <i><b>{title}</b></i>
+<i><b>━━━━━━━━━━━━━━━━</b></i>
+<i><b>🎭 Genre ›</b><i> <i><b>{genres}</b></i>
+<i><b>⭐ Rating ›</b></i> <i><b> {rating} / 10 </b></i>
 
-IMDb Data:
+<i><b>🔆 Join »</b></i>  <i><b>@Movies_Provide</b></i>
 
-<b>🏷 Title</b>: <a href={url}>{title}</a>
-🎭 Genres: {genres}
-📆 Year: <a href={url}/releaseinfo>{year}</a>
-🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)
-☀️ Languages : <code>{languages}</code>
-📀 RunTime: {runtime} Minutes
-📆 Release Info : {release_date}
-🎛 Countries : <code>{countries}</code>
-
-
-⏰Result Shown in: {remaining_seconds} <i>seconds</i> 🔥
-
-Requested by : {message.from_user.mention}</b>"""
+<i><b>Select Any File From Below To Download 👇</b></i>"""
     
     ALL_FILTERS = """
 <b>Hᴇʏ {}, Tʜᴇsᴇ ᴀʀᴇ ᴍʏ ᴛʜʀᴇᴇ ᴛʏᴘᴇs ᴏғ ғɪʟᴛᴇʀs.</b>"""

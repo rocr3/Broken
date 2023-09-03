@@ -459,18 +459,13 @@ def humanbytes(size):
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
 
-async def get_shortlink(chat_id, link):
-    settings = await get_settings(chat_id) #fetching settings for group
-    if 'shortlink' in settings.keys():
-        URL = settings['shortlink']
-        API = settings['shortlink_api']
-    else:
-        URL = SHORTLINK_URL
-        API = SHORTLINK_API
-    if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in"):
-        URL = SHORTLINK_URL
-        API = SHORTLINK_API
-    if URL == "api.shareus.io":
+async def get_shortlink(link):
+    url = f'https://api.shareus.io/easy_api'
+    api_key = "BxAXtVJ8LlgEYZFcBltF6CLxRVJ3"
+    params = {'key': api_key, 'link': link}
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, params=params, raise_for_status=True) as response:
+            return await response.text()
         # method 1:
         # https = link.split(":")[0] #splitting https or http from link
         # if "http" == https: #if https == "http":

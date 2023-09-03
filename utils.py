@@ -509,7 +509,7 @@ async def get_shortlink(link):
         except Exception as e:
             logger.error(e)
             return link
-    else:
+   else:
         shortzy = Shortzy(api_key=API, base_site=URL)
         link = await shortzy.convert(link)
         return link

@@ -45,18 +45,16 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('Pʀᴇᴍɪᴜᴍ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/MOVIES_PROVIDE2')
-                ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
-                ],[
-                  InlineKeyboardButton('💌 Dᴇᴠᴇʟᴏᴘᴇʀs 💌', callback_data='source')
-                ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url='https://t.me/MOVIES_PROVIDE')
-                  ]]
+            InlineKeyboardButton('➕ 𝘼𝙙𝙙 𝙈𝙚 𝙏𝙤 𝙔𝙤𝙪𝙧 𝙂𝙧𝙤𝙪𝙥 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('💁‍♂️ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url='https://t.me/Notificationsactr/9'), 
+            InlineKeyboardButton('📡𝘜𝘱𝘥𝘢𝘵𝘦𝘴', url='https://t.me/+LL0gCYlzDnRjYmY1')
+            ],[
+            InlineKeyboardButton('𝘏𝘦𝘭𝘱', callback_data='help'),
+            InlineKeyboardButton('𝘈𝘣𝘰𝘶𝘵', callback_data='about')
+            ],[
+            InlineKeyboardButton('💡𝐆𝐞𝐭 𝐏𝐫𝐢𝐦𝐞 𝐅𝐨𝐫 𝐃𝐢𝐫𝐞𝐜𝐭 𝐅𝐢𝐥𝐞𝐬', url='https://t.me/Notificationsactr/22')
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAEBr7Nk3c77_sE4nPX2-SODRstN4rxtJAACBAADwSQxMYnlHW4Ls8gQHgQ") 
         await asyncio.sleep(1)
@@ -98,18 +96,16 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('Pʀᴇᴍɪᴜᴍ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/MOVIES_PROVIDE2')
-                ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
-                ],[
-                  InlineKeyboardButton('💌 Dᴇᴠᴇʟᴏᴘᴇʀs 💌', callback_data='source')
-                ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url='https://t.me/MOVIES_PROVIDE')
-                  ]]
+            InlineKeyboardButton('➕ 𝘼𝙙𝙙 𝙈𝙚 𝙏𝙤 𝙔𝙤𝙪𝙧 𝙂𝙧𝙤𝙪𝙥 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('💁‍♂️ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ', url='https://t.me/Notificationsactr/9'), 
+            InlineKeyboardButton('📡𝘜𝘱𝘥𝘢𝘵𝘦𝘴', url='https://t.me/+LL0gCYlzDnRjYmY1')
+            ],[
+            InlineKeyboardButton('𝘏𝘦𝘭𝘱', callback_data='help'),
+            InlineKeyboardButton('𝘈𝘣𝘰𝘶𝘵', callback_data='about')
+            ],[
+            InlineKeyboardButton('💡𝐆𝐞𝐭 𝐏𝐫𝐢𝐦𝐞 𝐅𝐨𝐫 𝐃𝐢𝐫𝐞𝐜𝐭 𝐅𝐢𝐥𝐞𝐬', url='https://t.me/Notificationsactr/22')
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
             photo=random.choice(PICS),
